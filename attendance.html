@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 7px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #050505;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      border: 3px solid #111;
+      font-size: clamp(18px, 3.15vw, 44px);
+    }
+
+    col {
+      width: 20%;
+    }
+
+    td {
+      height: 84px;
+      padding: 5px 16px;
+      border: 3px solid #111;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    tr:first-child td {
+      height: 64px;
+      font-weight: bold;
+    }
+
+    .yellow {
+      background-color: #ffff00;
+    }
+
+    .blue {
+      background-color: #10a9df;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <colgroup>
+      <col><col><col><col><col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>Col Head1</td>
+        <td>Col Head2</td>
+        <td>Col Head3</td>
+        <td>Col Head4</td>
+        <td>Col Head5</td>
+      </tr>
+      <tr>
+        <td>Row1 Cell1</td>
+        <td class="yellow">Row1 Cell2</td>
+        <td>Row1 Cell3</td>
+        <td>Row1 Cell4</td>
+        <td>Row1 Cell5</td>
+      </tr>
+      <tr>
+        <td>Row2 Cell1</td>
+        <td colspan="2">Row2 Cell2</td>
+        <td>Row2 Cell3</td>
+        <td class="italic" rowspan="2">Row2 Cell4</td>
+      </tr>
+      <tr>
+        <td>Row3 Cell1</td>
+        <td rowspan="2">Row1 Cell2</td>
+        <td>Row3 Cell3</td>
+        <td class="bold">Row3 Cell4</td>
+      </tr>
+      <tr>
+        <td>Row4 Cell1</td>
+        <td>Row4 Cell2</td>
+        <td class="blue">Row4 Cell3</td>
+        <td>Row4 Cell4</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
